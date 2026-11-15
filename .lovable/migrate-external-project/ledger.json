@@ -1,0 +1,47 @@
+{
+  "source": "code-archive (consullex_site.zip, static HTML/CSS/JS) + brief + sitemaps + brand guidelines",
+  "capabilities": [
+    {
+      "capability": "code/pages",
+      "source": "index.html, empresas.html, pessoa-fisica.html, login.html, busca.html",
+      "outcome": "rebuild in TanStack Start following brief + sitemap",
+      "status": "verified",
+      "next_action": "none — 16 routes load; booking + signup flows exercised in browser"
+    },
+    {
+      "capability": "schema/records",
+      "source": "none (static site, no data store)",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "auth",
+      "source": "static login form, no backend",
+      "outcome": "static demo login per 'escopo front-end estático'",
+      "status": "accepted",
+      "next_action": "enable Lovable Cloud if real accounts are wanted"
+    },
+    {
+      "capability": "lead capture (CRM)",
+      "source": "static form, no submit target",
+      "outcome": "multi-step form with WhatsApp handoff; CRM target not provided",
+      "status": "pending",
+      "next_action": "user to choose CRM or Lovable Cloud storage"
+    },
+    {
+      "capability": "payments",
+      "source": "none",
+      "outcome": "UI only (cartão/Pix/boleto)",
+      "status": "accepted",
+      "next_action": "connect payment provider later"
+    },
+    {
+      "capability": "secrets/integrations",
+      "source": "none detected",
+      "outcome": "none",
+      "status": "verified",
+      "next_action": "none"
+    }
+  ]
+}

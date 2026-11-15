@@ -28,3 +28,12 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules (Consullex)
+
+- Front-end only with mock data in `src/lib/data.ts`; no backend yet — why: the brief scopes a static front-end, so swapping in Lovable Cloud later only touches the data/lead/booking helpers.
+- Lead capture goes through the single `submitLead` function in `src/components/site/LeadForm.tsx` — why: one integration point for a future CRM or database.
+- Booking state passes to the confirmation page via `sessionStorage` helpers in `src/lib/booking.ts` — why: no server persistence exists yet.
+- Public pages wrap content in `SiteShell`; booking, auth and dashboards use their own layouts (`FlowHeader`, `AuthLayout`, `DashboardLayout`) — why: conversion and app screens hide marketing navigation.
+- Brand colors live as semantic tokens in `src/styles.css` (navy, gold, emerald, graphite, ivory…) and buttons use brand variants (`gold`, `navy`, `outline-navy`, `outline-light`, `whatsapp`) — why: components never hardcode colors.
+- Business rules (CPF/CNPJ, professional e-mail, coupons) are pure functions covered by `src/test/rules.test.ts` — why: keep validation testable outside the UI.

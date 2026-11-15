@@ -10,33 +10,232 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AjudaRouteImport } from './routes/ajuda'
+import { Route as CadastroRouteImport } from './routes/cadastro'
+import { Route as ConfirmacaoRouteImport } from './routes/confirmacao'
+import { Route as ConteudosRouteImport } from './routes/conteudos'
+import { Route as EmpresasRouteImport } from './routes/empresas'
+import { Route as EntrarRouteImport } from './routes/entrar'
+import { Route as ParaVoceRouteImport } from './routes/para-voce'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as TermosRouteImport } from './routes/termos'
+import { Route as AgendarSlugRouteImport } from './routes/agendar.$slug'
+import { Route as EspecialistasIndexRouteImport } from './routes/especialistas.index'
+import { Route as EspecialistasSlugRouteImport } from './routes/especialistas.$slug'
+import { Route as PainelClienteRouteImport } from './routes/painel.cliente'
+import { Route as PainelEmpresaRouteImport } from './routes/painel.empresa'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AjudaRoute = AjudaRouteImport.update({
+  id: '/ajuda',
+  path: '/ajuda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CadastroRoute = CadastroRouteImport.update({
+  id: '/cadastro',
+  path: '/cadastro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfirmacaoRoute = ConfirmacaoRouteImport.update({
+  id: '/confirmacao',
+  path: '/confirmacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConteudosRoute = ConteudosRouteImport.update({
+  id: '/conteudos',
+  path: '/conteudos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmpresasRoute = EmpresasRouteImport.update({
+  id: '/empresas',
+  path: '/empresas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EntrarRoute = EntrarRouteImport.update({
+  id: '/entrar',
+  path: '/entrar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParaVoceRoute = ParaVoceRouteImport.update({
+  id: '/para-voce',
+  path: '/para-voce',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgendarSlugRoute = AgendarSlugRouteImport.update({
+  id: '/agendar/$slug',
+  path: '/agendar/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspecialistasIndexRoute = EspecialistasIndexRouteImport.update({
+  id: '/especialistas/',
+  path: '/especialistas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspecialistasSlugRoute = EspecialistasSlugRouteImport.update({
+  id: '/especialistas/$slug',
+  path: '/especialistas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PainelClienteRoute = PainelClienteRouteImport.update({
+  id: '/painel/cliente',
+  path: '/painel/cliente',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PainelEmpresaRoute = PainelEmpresaRouteImport.update({
+  id: '/painel/empresa',
+  path: '/painel/empresa',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ajuda': typeof AjudaRoute
+  '/cadastro': typeof CadastroRoute
+  '/confirmacao': typeof ConfirmacaoRoute
+  '/conteudos': typeof ConteudosRoute
+  '/empresas': typeof EmpresasRoute
+  '/entrar': typeof EntrarRoute
+  '/para-voce': typeof ParaVoceRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/sobre': typeof SobreRoute
+  '/termos': typeof TermosRoute
+  '/agendar/$slug': typeof AgendarSlugRoute
+  '/especialistas/$slug': typeof EspecialistasSlugRoute
+  '/painel/cliente': typeof PainelClienteRoute
+  '/painel/empresa': typeof PainelEmpresaRoute
+  '/especialistas/': typeof EspecialistasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ajuda': typeof AjudaRoute
+  '/cadastro': typeof CadastroRoute
+  '/confirmacao': typeof ConfirmacaoRoute
+  '/conteudos': typeof ConteudosRoute
+  '/empresas': typeof EmpresasRoute
+  '/entrar': typeof EntrarRoute
+  '/para-voce': typeof ParaVoceRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/sobre': typeof SobreRoute
+  '/termos': typeof TermosRoute
+  '/agendar/$slug': typeof AgendarSlugRoute
+  '/especialistas/$slug': typeof EspecialistasSlugRoute
+  '/painel/cliente': typeof PainelClienteRoute
+  '/painel/empresa': typeof PainelEmpresaRoute
+  '/especialistas': typeof EspecialistasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ajuda': typeof AjudaRoute
+  '/cadastro': typeof CadastroRoute
+  '/confirmacao': typeof ConfirmacaoRoute
+  '/conteudos': typeof ConteudosRoute
+  '/empresas': typeof EmpresasRoute
+  '/entrar': typeof EntrarRoute
+  '/para-voce': typeof ParaVoceRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/sobre': typeof SobreRoute
+  '/termos': typeof TermosRoute
+  '/agendar/$slug': typeof AgendarSlugRoute
+  '/especialistas/$slug': typeof EspecialistasSlugRoute
+  '/painel/cliente': typeof PainelClienteRoute
+  '/painel/empresa': typeof PainelEmpresaRoute
+  '/especialistas/': typeof EspecialistasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/ajuda'
+    | '/cadastro'
+    | '/confirmacao'
+    | '/conteudos'
+    | '/empresas'
+    | '/entrar'
+    | '/para-voce'
+    | '/privacidade'
+    | '/sobre'
+    | '/termos'
+    | '/agendar/$slug'
+    | '/especialistas/$slug'
+    | '/painel/cliente'
+    | '/painel/empresa'
+    | '/especialistas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/ajuda'
+    | '/cadastro'
+    | '/confirmacao'
+    | '/conteudos'
+    | '/empresas'
+    | '/entrar'
+    | '/para-voce'
+    | '/privacidade'
+    | '/sobre'
+    | '/termos'
+    | '/agendar/$slug'
+    | '/especialistas/$slug'
+    | '/painel/cliente'
+    | '/painel/empresa'
+    | '/especialistas'
+  id:
+    | '__root__'
+    | '/'
+    | '/ajuda'
+    | '/cadastro'
+    | '/confirmacao'
+    | '/conteudos'
+    | '/empresas'
+    | '/entrar'
+    | '/para-voce'
+    | '/privacidade'
+    | '/sobre'
+    | '/termos'
+    | '/agendar/$slug'
+    | '/especialistas/$slug'
+    | '/painel/cliente'
+    | '/painel/empresa'
+    | '/especialistas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AjudaRoute: typeof AjudaRoute
+  CadastroRoute: typeof CadastroRoute
+  ConfirmacaoRoute: typeof ConfirmacaoRoute
+  ConteudosRoute: typeof ConteudosRoute
+  EmpresasRoute: typeof EmpresasRoute
+  EntrarRoute: typeof EntrarRoute
+  ParaVoceRoute: typeof ParaVoceRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
+  SobreRoute: typeof SobreRoute
+  TermosRoute: typeof TermosRoute
+  AgendarSlugRoute: typeof AgendarSlugRoute
+  EspecialistasSlugRoute: typeof EspecialistasSlugRoute
+  PainelClienteRoute: typeof PainelClienteRoute
+  PainelEmpresaRoute: typeof PainelEmpresaRoute
+  EspecialistasIndexRoute: typeof EspecialistasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +247,131 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ajuda': {
+      id: '/ajuda'
+      path: '/ajuda'
+      fullPath: '/ajuda'
+      preLoaderRoute: typeof AjudaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cadastro': {
+      id: '/cadastro'
+      path: '/cadastro'
+      fullPath: '/cadastro'
+      preLoaderRoute: typeof CadastroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/confirmacao': {
+      id: '/confirmacao'
+      path: '/confirmacao'
+      fullPath: '/confirmacao'
+      preLoaderRoute: typeof ConfirmacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conteudos': {
+      id: '/conteudos'
+      path: '/conteudos'
+      fullPath: '/conteudos'
+      preLoaderRoute: typeof ConteudosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/empresas': {
+      id: '/empresas'
+      path: '/empresas'
+      fullPath: '/empresas'
+      preLoaderRoute: typeof EmpresasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entrar': {
+      id: '/entrar'
+      path: '/entrar'
+      fullPath: '/entrar'
+      preLoaderRoute: typeof EntrarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/para-voce': {
+      id: '/para-voce'
+      path: '/para-voce'
+      fullPath: '/para-voce'
+      preLoaderRoute: typeof ParaVoceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agendar/$slug': {
+      id: '/agendar/$slug'
+      path: '/agendar/$slug'
+      fullPath: '/agendar/$slug'
+      preLoaderRoute: typeof AgendarSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/especialistas/': {
+      id: '/especialistas/'
+      path: '/especialistas'
+      fullPath: '/especialistas/'
+      preLoaderRoute: typeof EspecialistasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/especialistas/$slug': {
+      id: '/especialistas/$slug'
+      path: '/especialistas/$slug'
+      fullPath: '/especialistas/$slug'
+      preLoaderRoute: typeof EspecialistasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/painel/cliente': {
+      id: '/painel/cliente'
+      path: '/painel/cliente'
+      fullPath: '/painel/cliente'
+      preLoaderRoute: typeof PainelClienteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/painel/empresa': {
+      id: '/painel/empresa'
+      path: '/painel/empresa'
+      fullPath: '/painel/empresa'
+      preLoaderRoute: typeof PainelEmpresaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AjudaRoute: AjudaRoute,
+  CadastroRoute: CadastroRoute,
+  ConfirmacaoRoute: ConfirmacaoRoute,
+  ConteudosRoute: ConteudosRoute,
+  EmpresasRoute: EmpresasRoute,
+  EntrarRoute: EntrarRoute,
+  ParaVoceRoute: ParaVoceRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
+  SobreRoute: SobreRoute,
+  TermosRoute: TermosRoute,
+  AgendarSlugRoute: AgendarSlugRoute,
+  EspecialistasSlugRoute: EspecialistasSlugRoute,
+  PainelClienteRoute: PainelClienteRoute,
+  PainelEmpresaRoute: PainelEmpresaRoute,
+  EspecialistasIndexRoute: EspecialistasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
